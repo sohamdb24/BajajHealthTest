@@ -1,0 +1,5 @@
+package com.bajajhealth;
+
+public class DestinationHashGenerator {
+
+}
