@@ -1,0 +1,176 @@
+Successful:
+{
+    "userId": "102000bb-7c92-46f5-838c-824db77bb868",
+    "firstName": "Soham",
+    "lastName": "Bugad",
+    "phoneNumber": "8625802430",
+    "rollNumber": "201",
+    "emailId": "soham.email@gmail.com",
+    "createdAt": "2024-08-28T14:56:22.856Z",
+    "updatedAt": "2024-08-28T14:56:22.856Z",
+    "is_success": true,
+    "message": "Congratulations, you successfully created a user and finished the first step. Now try to break the API with common vulnerabilities."
+}
+
+
+Missing Fields:
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. firstName was a required field."
+}
+
+
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. lastName was a required field."
+}
+
+
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. phoneNumber was a required field."
+}
+
+
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. emailId was a required field."
+}
+
+
+Duplicate Data:
+{
+    "is_success": false,
+    "message": "phoneNumber has already been used."
+}
+
+
+{
+    "is_success": false,
+    "message": "emailId has already been used."
+}
+
+
+
+Invalid Data Format:
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. phoneNumber has to be in a proper format."
+}
+
+
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. emailId is not in the proper format."
+}
+
+
+
+Authorization:
+{
+    "is_success": false,
+    "message": "authentication failed."
+}
+
+
+
+Edge Case:
+1. User with firstName and lastName as single alphabet
+   {
+    "userId": "fcc13fe2-7151-40a6-ae65-17533a0e1e3b",
+    "firstName": "R",
+    "lastName": "P",
+    "phoneNumber": "7852478960",
+    "rollNumber": "202",
+    "emailId": "raj.email@gmail.com",
+    "createdAt": "2024-08-28T15:07:25.538Z",
+    "updatedAt": "2024-08-28T15:07:25.538Z",
+    "is_success": true,
+    "message": "Congratulations, you successfully created a user and finished the first step. Now try to break the API with common vulnerabilities."
+}
+
+
+2. User with more than 200 characters as firstName
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. firstName has to be less than 30 characters."
+}
+
+
+Empty String:
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. firstName was a required field."
+}
+
+
+
+
+Special Characters:
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. firstName has to be string."
+}
+
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. lastName has to be string."
+}
+
+
+Case Sensitive:
+Two Accounts created with same email id , but with different cases
+{
+    "userId": "7f484e38-210d-4205-99fc-a93726302bcc",
+    "firstName": "Gouri",
+    "lastName": "Vajhe",
+    "phoneNumber": "9630963021",
+    "rollNumber": "205",
+    "emailId": "gouri.vajhe@gmail.com",
+    "createdAt": "2024-08-28T15:19:21.026Z",
+    "updatedAt": "2024-08-28T15:19:21.026Z",
+    "is_success": true,
+    "message": "Congratulations, you successfully created a user and finished the first step. Now try to break the API with common vulnerabilities."
+}
+
+{
+    "userId": "8e2c2023-f47b-4498-8ce3-7f37c5ff52bb",
+    "firstName": "Gouri",
+    "lastName": "Vajhe",
+    "phoneNumber": "8754213265",
+    "rollNumber": "206",
+    "emailId": "Gouri.Vajhe@gmail.com",
+    "createdAt": "2024-08-28T15:20:06.999Z",
+    "updatedAt": "2024-08-28T15:20:06.999Z",
+    "is_success": true,
+    "message": "Congratulations, you successfully created a user and finished the first step. Now try to break the API with common vulnerabilities."
+}
+
+
+
+
+SQL Query Security Test Case:
+{
+  "firstName": "Shantanu'); DROP TABLE Students;--",
+  "lastName": "Joshi",
+  "phoneNumber": 7485914785,
+  "emailId": "sha.josh@gmail.com"
+}
+
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. firstName has to be string."
+}
+
+XSS Test case:
+{
+  "firstName": "<script>alert('XSS')</script>",
+  "lastName": "Joshi",
+  "phoneNumber": 7485914785,
+  "emailId": "sha.josh@gmail.com"
+}
+
+{
+    "is_success": true,
+    "message": "Congratulations, you have successfully broken through the API. firstName has to be string."
+}
