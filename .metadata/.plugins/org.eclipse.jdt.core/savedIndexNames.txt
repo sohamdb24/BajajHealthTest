@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+D:\CDAC\BajajHealthTest\.metadata\.plugins\org.eclipse.jdt.core
-998924096.index
-3763498353.index
-1865797976.index
